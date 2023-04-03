@@ -1,0 +1,18 @@
+<div class="service">
+    <h3>{{user.serviceType}} 
+        <!-- <fa-icon 
+            [ngStyle]="{color: 'green'}"
+            [icon]="faCircleInfo">
+        </fa-icon>  -->
+        <button (click)="toggle()" id="bt">{{buttonName}} {{user.firstName}}</button>
+    </h3>
+    <h5>Name: {{user.firstName}}</h5>
+    <h5>From: {{user.city}}</h5>
+    <ng-container *ngIf="show">
+        <div>
+            <h5>Surname: {{user.lastName}}</h5>
+            <h5>Email: {{user.email}}</h5>
+            <h5>Phone Number: {{user.phoneNumber}}</h5>
+        </div>
+    </ng-container>
+</div>

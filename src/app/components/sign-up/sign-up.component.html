@@ -1,0 +1,44 @@
+<h2>Welcome!</h2>
+<form class="add-form" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+        <label>First Name</label>
+        <input class="form-control ng-untouched ng-pristine ng-valid" type="text" class="form-control" id="firstName" required  name="firstName" [(ngModel)]="firstName">
+    </div>
+    <div class="form-group">
+        <label>Last Name</label>
+        <input class="form-control ng-untouched ng-pristine ng-valid" type="text" class="form-control" id="lastName" required [(ngModel)]="lastName" name="lastName">
+    </div>
+    <div class="form-group">
+        <label>Email</label>
+        <input class="form-control ng-untouched ng-pristine ng-valid" type="text" class="form-control" id="Email" required [(ngModel)]="email" name="email">
+    </div>    
+    <div class="form-group">
+        <label>Passowrd</label>
+        <input class="form-control ng-untouched ng-pristine ng-valid" type="password" class="form-control" id="password" required [(ngModel)]="password" name="password">
+    </div>    
+    <div class="form-group">
+        <label>Phone Number</label>
+        <input class="form-control ng-untouched ng-pristine ng-valid" type="text" class="form-control" id="phone" required [(ngModel)]="phoneNumber" name="phoneNumber">
+    </div>    
+    <div class="form-group">
+        <label>imageUrl</label>
+        <input class="form-control ng-untouched ng-pristine ng-valid" type="url" class="form-control" id="imageUrl" required [(ngModel)]="imageUrl" name="imageUrl">
+    </div>
+    <div class="form-group">
+        <label>service Type</label>
+        <select class="form-control"  id="type"
+            required
+            [(ngModel)]="serviceType" name="serviceType">
+            <option *ngFor="let serviceType of serviceTypes" [value]="serviceType">{{serviceType}}</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label>City/Town</label>
+        <select class="form-control"  id="coty"
+            required
+            [(ngModel)]="city" name="city">
+            <option *ngFor="let city of cities" [value]="city">{{city}}</option>
+        </select>
+    </div>
+    <button type="button" class="btn btn-default" (click)="onSubmit()">Submit</button> 
+</form>
