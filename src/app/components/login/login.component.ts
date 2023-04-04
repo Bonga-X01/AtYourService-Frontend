@@ -40,23 +40,11 @@ export class LoginComponent {
     this.loginService.loginUser(loginInfo).subscribe(
       (
         (res) => {
-          if (typeof res !== 'undefined' && res.length > 0) {
-            // the array is defined and has one element
-            this.user = res[0];
-            if(loginInfo.password != this.user.password){
-              console.log(this.user.password)
-              alert("enter correct password");
-              return;
-            }
+            this.user = res;
             console.log(this.user)
             this.submit = true;
             this.phoneNumber='';
             this.password='';
-          }
-          else{
-            alert("enter correct details");
-            return;
-          }
         }
       )
     );
